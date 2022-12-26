@@ -41,7 +41,7 @@
             <nav uk-navbar>
                 <div class="uk-navbar-left">
                     <a href="#" class="uk-navbar-item uk-logo">
-                    <img width="140" src="<?= base_url('public/') ?>images/sc.png" /> &nbsp;
+                    <img width="140" src="<?= base_url('public/') ?>images/download.png" /> &nbsp;
                     </a>
                 </div>
                 <div class="uk-navbar-right">
