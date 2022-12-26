@@ -2,5 +2,5 @@
 var notyff = new Notyf();
 
 setTimeout(function() {
-	notyff.confirm('Selamat datang, Administrator Bencana!!');
+	notyff.confirm('Selamat datang, Administrator!!');
 }, 500);
