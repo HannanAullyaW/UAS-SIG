@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2022 at 07:57 PM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.7
+-- Generation Time: Dec 27, 2022 at 12:34 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,26 +24,40 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bencana`
+-- Table structure for table `admin`
 --
 
-CREATE TABLE `bencana` (
-  `idBencana` int(11) NOT NULL,
-  `kategoriBencana` varchar(70) NOT NULL,
-  `kecamatanBencana` varchar(100) NOT NULL,
-  `keteranganBencana` text NOT NULL,
-  `latitudeBencana` varchar(100) NOT NULL,
-  `longitudeBencana` varchar(100) NOT NULL,
-  `lokasiBencana` varchar(100) NOT NULL
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pertanian`
+--
+
+CREATE TABLE `pertanian` (
+  `idpertanian` int(11) NOT NULL,
+  `kategoripertanian` varchar(70) NOT NULL,
+  `kecamatanpertanian` varchar(100) NOT NULL,
+  `keteranganpertanian` text NOT NULL,
+  `latitudepertanian` varchar(100) NOT NULL,
+  `longitudepertanian` varchar(100) NOT NULL,
+  `lokasipertanian` varchar(100) NOT NULL,
+  `idAdmin` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `bencana`
+-- Dumping data for table `pertanian`
 --
 
-INSERT INTO `bencana` (`idBencana`, `kategoriBencana`, `kecamatanBencana`, `keteranganBencana`, `latitudeBencana`, `longitudeBencana`, `lokasiBencana`) VALUES
-(10, 'kebun kopi', 'Dewantara', 'zfsdsd', '5.242398635', '97.024733539', 'Krueng Geukueh'),
-(11, 'kebun cabai', 'muara satu', 'fsdfsdf', '5.181164', '97.141322', 'lhokseumawe');
+INSERT INTO `pertanian` (`idpertanian`, `kategoripertanian`, `kecamatanpertanian`, `keteranganpertanian`, `latitudepertanian`, `longitudepertanian`, `lokasipertanian`, `idAdmin`) VALUES
+(19, 'kebun teh', 'Aceh', 'frtetwet', '5.051701', '97.318123', 'Acehh', 0),
+(20, 'kebun sawit', 'jkaarrta', 'etsetet', '-6.200000', '106.816666', 'jakarta', 0),
+(24, 'kebun tebu', 'bali', 'afwafaws', '-8.409518', '115.188919', 'bali', 0);
 
 -- --------------------------------------------------------
 
@@ -65,17 +79,25 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`idUsers`, `namaLengkap`, `username`, `password`, `status`, `md4`) VALUES
-(1, 'Adminstrator', 'admin', '$2y$10$U73DK4qGu7HDmu6iPv9kB.Ai9EC.mdsJ82XymCKXF/Cwkp4KZ5iEe', 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(1, 'Adminstrator', 'admin', '$2y$10$U73DK4qGu7HDmu6iPv9kB.Ai9EC.mdsJ82XymCKXF/Cwkp4KZ5iEe', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(4, 'aull', 'aullya.hanan', '$2y$10$h46IdbWzflmcUM3ZeCPjTe5JOarg8iaFr9bgMzniTg43bcpeEQc6y', 'admin', '81dc9bdb52d04dc20036dbd8313ed055'),
+(5, 'iin', 'iin', '$2y$10$Jhqdxew1gX5hp0Eo1fiBiuj6mPmkqb7Z7/q10Z5V.m0AVlpTpJpAm', 'users', '81dc9bdb52d04dc20036dbd8313ed055');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `bencana`
+-- Indexes for table `admin`
 --
-ALTER TABLE `bencana`
-  ADD PRIMARY KEY (`idBencana`);
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pertanian`
+--
+ALTER TABLE `pertanian`
+  ADD PRIMARY KEY (`idpertanian`);
 
 --
 -- Indexes for table `users`
@@ -88,16 +110,22 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `bencana`
+-- AUTO_INCREMENT for table `admin`
 --
-ALTER TABLE `bencana`
-  MODIFY `idBencana` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pertanian`
+--
+ALTER TABLE `pertanian`
+  MODIFY `idpertanian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
