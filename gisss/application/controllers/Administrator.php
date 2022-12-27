@@ -9,6 +9,7 @@ class Administrator extends CI_Controller
 		$this->load->model('m_model');
 		is_logged_in();
 	}
+
 	public function index()
 	{
 		$atas = array(
@@ -24,6 +25,7 @@ class Administrator extends CI_Controller
 		$this->load->view('beranda', $data, FALSE);
 		$this->load->view('templates/admin/footer');
 	}
+
 	public function biodata()
 	{
 		$atas = array(

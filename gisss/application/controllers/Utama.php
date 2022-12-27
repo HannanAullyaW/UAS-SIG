@@ -13,6 +13,6 @@ class Utama extends CI_Controller {
 		$data =array(
 			'pertanian' => $this->m_model->data_pertanian(),	
 		);
-		$this->load->view('utama',$data, FALSE);
+		$this->load->view('landingpage',$data, FALSE);
 	}
 }

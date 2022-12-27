@@ -54,6 +54,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['serveradmin'] = 'administrator/index';
+$route['halamanlogin'] = 'auth/index';
+
 
 $route['proseslogin'] = 'auth/ProsesLogin';
 $route['keluar'] = 'auth/logoutProses';
