@@ -97,43 +97,43 @@
                 collapsed: true,
             }));
 
-            var angin = L.icon({
-                iconUrl: '<?= base_url('public/icon/angin.png') ?>',
+            var cabai = L.icon({
+                iconUrl: '<?= base_url('public/icon/cabai.png') ?>',
                 iconSize: [30, 30]
             });
 
-            var banjir = L.icon({
-                iconUrl: '<?= base_url('public/icon/banjir.png') ?>',
+            var sawah = L.icon({
+                iconUrl: '<?= base_url('public/icon/padi.png') ?>',
                 iconSize: [30, 30]
             });
 
-            var gempabumi = L.icon({
-                iconUrl: '<?= base_url('public/icon/gempabumi.png') ?>',
+            var kopi = L.icon({
+                iconUrl: '<?= base_url('public/icon/kopi.png') ?>',
                 iconSize: [30, 30]
             });
 
-            var kebakaran = L.icon({
-                iconUrl: '<?= base_url('public/icon/kebakaran.png') ?>',
+            var teh = L.icon({
+                iconUrl: '<?= base_url('public/icon/teh.png') ?>',
                 iconSize: [30, 30]
             });
 
-            var kecelakaan = L.icon({
-                iconUrl: '<?= base_url('public/icon/kecelakaan.png') ?>',
+            var sawit = L.icon({
+                iconUrl: '<?= base_url('public/icon/sawit.png') ?>',
                 iconSize: [30, 30]
             });
 
-            var longsor = L.icon({
-                iconUrl: '<?= base_url('public/icon/longsor.png') ?>',
+            var kelapa = L.icon({
+                iconUrl: '<?= base_url('public/icon/kelapa.png') ?>',
                 iconSize: [30, 30]
             });
 
-            var pohontumbang = L.icon({
-                iconUrl: '<?= base_url('public/icon/pohontumbang.png') ?>',
+            var pisang = L.icon({
+                iconUrl: '<?= base_url('public/icon/pisang.png') ?>',
                 iconSize: [30, 30]
             });
 
-            var tsunami = L.icon({
-                iconUrl: '<?= base_url('public/icon/tsunami.png') ?>',
+            var tebu = L.icon({
+                iconUrl: '<?= base_url('public/icon/tebu.png') ?>',
                 iconSize: [30, 30]
             });
 
@@ -146,24 +146,24 @@
                 var kategori = data[i].kategori;
 
                 if (kategori == "kebun cabai") {
-                    icons = banjir;
+                    icons = cabai;
                 } else if (kategori == "sawah") {
-                    icons = angin;
+                    icons = padi;
                 } else if (kategori == "kebun kopi") {
-                    icons = tsunami;
+                    icons = kopi;
 
                 } else if (kategori == "kebun teh") {
-                    icons = gempabumi;
+                    icons = teh;
 
                 } else if (kategori == "kebun sawit") {
-                    icons = kebakaran;
+                    icons = sawit;
 
                 } else if (kategori == "kebun kelapa") {
-                    icons = kecelakaan;
+                    icons = kelapa;
                 } else if (kategori == "kebun pisang") {
-                    icons = longsor;
+                    icons = pisang;
                 } else if (kategori == "kebun tebu") {
-                    icons = pohontumbang;
+                    icons = tebu;
                 }
 
                 var marker = new L.Marker(new L.latLng(lokasi), {

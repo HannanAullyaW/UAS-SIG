@@ -105,11 +105,11 @@
             var kategori = data[i].kategori;
 
             if (kategori == "kebun cabai") {
-                icons = kopi;
+                icons = cabai;
             } else if (kategori == "sawah") {
                 icons = padi;
             } else if (kategori == "kebun kopi") {
-                icons = tebu;
+                icons = kopi;
 
             } else if (kategori == "kebun teh") {
                 icons = teh;
@@ -120,9 +120,9 @@
             } else if (kategori == "kebun kelapa") {
                 icons = kelapa;
             } else if (kategori == "kebun pisang") {
-                icons = cabai;
-            } else if (kategori == "kebun tebu") {
                 icons = pisang;
+            } else if (kategori == "kebun tebu") {
+                icons = tebu;
             }
 
             var marker = new L.Marker(new L.latLng(lokasi), {
