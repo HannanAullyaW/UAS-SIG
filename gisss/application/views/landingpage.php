@@ -27,7 +27,7 @@
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Welcome to Sistem Informasi Geografis Pertanian</h1>
-
+      <h2>Sistem pemetaan lahan pertanian Indonesia</h2>
       <a href="halamanlogin" class="btn-get-started">Login</a>
     </div>
   </section><!-- End Hero Section -->
